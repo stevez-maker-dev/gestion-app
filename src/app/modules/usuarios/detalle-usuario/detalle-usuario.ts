@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { UsuariosService, Usuario } from '../../services/usuarios/usuarios';
-import { EstadoUsuarioPipe } from '../../pipes/estado-usuarios/estado-usuario-pipe';
+import { UsuariosService, Usuario } from '../../../services/usuarios/usuarios';
+import { EstadoUsuarioPipe } from '../../../pipes/estado-usuarios/estado-usuario-pipe';
 
 @Component({
   selector: 'app-detalle-usuario',

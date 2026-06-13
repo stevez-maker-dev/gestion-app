@@ -1,6 +1,8 @@
 <div>
-  <h2>Productos</h2>
-
+  <div class="encabezado">
+    <h2>Productos</h2>
+    <a [routerLink]="['/productos/crear']" class="btn-agregar">+ Agregar producto</a>
+  </div>
   <p class="vacio" *ngIf="productos.length === 0">No hay productos disponibles.</p>
 
   <div class="producto" *ngFor="let producto of productos">

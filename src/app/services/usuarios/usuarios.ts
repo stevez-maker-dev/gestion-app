@@ -28,6 +28,10 @@ export class UsuariosService {
     return this.usuarios.find(u => u.id === id);
   }
 
+  agregarUsuario(usuario: Usuario): void {
+    this.usuarios.push(usuario);
+  }
+
   eliminarUsuario(id: number): void {
     this.usuarios = this.usuarios.filter(u => u.id !== id);
   }

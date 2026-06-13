@@ -1,0 +1,50 @@
+<div>
+  <a [routerLink]="['/productos']">← Volver a productos</a>
+
+  <div class="formulario">
+    <h2>Agregar producto</h2>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre"
+          [ngClass]="{ 'campo-invalido': formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched }"
+        />
+        <ul *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+          <li *ngFor="let error of getErrores('nombre')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo">
+        <label>Precio</label>
+        <input type="number" formControlName="precio"
+          [ngClass]="{ 'campo-invalido': formulario.get('precio')?.invalid && formulario.get('precio')?.touched }"
+        />
+        <ul *ngIf="formulario.get('precio')?.invalid && formulario.get('precio')?.touched">
+          <li *ngFor="let error of getErrores('precio')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo">
+        <label>Descripción</label>
+        <textarea formControlName="descripcion"
+          [ngClass]="{ 'campo-invalido': formulario.get('descripcion')?.invalid && formulario.get('descripcion')?.touched }"
+        ></textarea>
+        <ul *ngIf="formulario.get('descripcion')?.invalid && formulario.get('descripcion')?.touched">
+          <li *ngFor="let error of getErrores('descripcion')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo">
+        <label>Descuento % (opcional)</label>
+        <input type="number" formControlName="descuento" />
+      </div>
+
+      <button type="submit" [disabled]="formulario.invalid">
+        Guardar producto
+      </button>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div>
+  <a [routerLink]="['/usuarios']">← Volver a usuarios</a>
+
+  <div class="formulario">
+    <h2>Agregar usuario</h2>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre"
+          [ngClass]="{ 'campo-invalido': formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched }"
+        />
+        <ul *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+          <li *ngFor="let error of getErrores('nombre')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo">
+        <label>Email</label>
+        <input type="email" formControlName="email"
+          [ngClass]="{ 'campo-invalido': formulario.get('email')?.invalid && formulario.get('email')?.touched }"
+        />
+        <ul *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched">
+          <li *ngFor="let error of getErrores('email')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo">
+        <label>Rol</label>
+        <select formControlName="rol"
+          [ngClass]="{ 'campo-invalido': formulario.get('rol')?.invalid && formulario.get('rol')?.touched }"
+        >
+          <option value="">Seleccioná un rol</option>
+          <option value="Admin">Admin</option>
+          <option value="Editor">Editor</option>
+          <option value="Viewer">Viewer</option>
+        </select>
+        <ul *ngIf="formulario.get('rol')?.invalid && formulario.get('rol')?.touched">
+          <li *ngFor="let error of getErrores('rol')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="campo campo-check">
+        <label>
+          <input type="checkbox" formControlName="activo" />
+          Usuario activo
+        </label>
+      </div>
+
+      <button type="submit" [disabled]="formulario.invalid">
+        Guardar usuario
+      </button>
+
+    </form>
+  </div>
+</div>

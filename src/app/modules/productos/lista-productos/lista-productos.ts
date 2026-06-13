@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { ProductosService, Producto } from '../../services/productos/productos';
-import { DescuentoPipe } from '../../pipes/descuento/descuento-pipe';
+import { ProductosService, Producto } from '../../../services/productos/productos';
+import { DescuentoPipe } from '../../../pipes/descuento/descuento-pipe';
 
 @Component({
   selector: 'app-lista-productos',

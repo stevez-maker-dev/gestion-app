@@ -4,17 +4,17 @@ export const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('./inicio/inicio.module').then(m => m.InicioModule)
+            import('./modules/inicio/inicio.module').then(m => m.InicioModule)
     },
     {
         path: 'productos',
         loadChildren: () => 
-            import('./productos/productos.module').then(m => m.ProductosModule)
+            import('./modules/productos/productos.module').then(m => m.ProductosModule)
     },
     {
         path: 'usuarios',
         loadChildren: () =>
-            import('./usuarios/usuarios.module').then(m => m.UsuariosModule)
+            import('./modules/usuarios/usuarios.module').then(m => m.UsuariosModule)
     },
     {
         path: '**',

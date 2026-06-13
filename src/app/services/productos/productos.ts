@@ -32,7 +32,7 @@ export class ProductosService {
     this.productos = this.productos.filter(p => p.id !== id);
   }
 
-  calcularPrecioFinal(precio:number, descuento: number = 0): number {
-    return precio - (precio * descuento / 100);
+  agregarProducto(producto: Producto): void {
+    this.productos.push(producto);
   }
 }

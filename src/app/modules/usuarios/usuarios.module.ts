@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaUsuarios } from './lista-usuarios/lista-usuarios';
 import { DetalleUsuario } from './detalle-usuario/detalle-usuario';
+import { CrearUsuario } from './crear-usuario/crear-usuario';
 import { UsuariosRoutingModule } from './usuarios.routes';
 
 @NgModule({
@@ -9,7 +10,8 @@ import { UsuariosRoutingModule } from './usuarios.routes';
         CommonModule,
         UsuariosRoutingModule,
         ListaUsuarios,
-        DetalleUsuario
+        DetalleUsuario,
+        CrearUsuario
     ]
 })
 export class UsuariosModule {}

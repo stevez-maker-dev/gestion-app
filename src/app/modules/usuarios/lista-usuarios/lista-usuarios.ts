@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { UsuariosService, Usuario } from '../../services/usuarios/usuarios';
-import { EstadoUsuarioPipe } from '../../pipes/estado-usuarios/estado-usuario-pipe';
+import { UsuariosService, Usuario } from '../../../services/usuarios/usuarios';
+import { EstadoUsuarioPipe } from '../../../pipes/estado-usuarios/estado-usuario-pipe';
 
 @Component({
   selector: 'app-lista-usuarios',
