@@ -44,7 +44,7 @@ y almacenamiento en localStorage.
 ## Instrucciones para ejecutar el proyecto
 
 ### 1. Clonar el repositorio
-git clone https://github.com/sebastevez91/gestion-app.git
+git clone https://github.com/stevez-maker-dev/gestion-app.git
 
 ### 2. Instalar dependencias
 npm install
@@ -59,7 +59,7 @@ http://localhost:4200
 
 ## Despliegue
 - Plataforma: Vercel
-- URL: (agregar link después del despliegue)
+- URL: [Deploy demo](https://gestion-app-delta.vercel.app/)
 
 ---
 
