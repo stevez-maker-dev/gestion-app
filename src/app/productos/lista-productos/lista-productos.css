@@ -1,0 +1,78 @@
+h2 {
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+.producto {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.producto-info h3 {
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+.descripcion {
+  color: #777;
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+.precio {
+  margin: 0;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.descuento {
+  color: #27ae60;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-detalle {
+  padding: 8px 14px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn-detalle:hover {
+  background-color: #2176ae;
+}
+
+.btn-eliminar {
+  padding: 8px 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+.vacio {
+  color: #999;
+  text-align: center;
+  margin-top: 40px;
+}

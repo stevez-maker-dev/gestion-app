@@ -1,0 +1,23 @@
+<div>
+  <h2>Productos</h2>
+
+  <p class="vacio" *ngIf="productos.length === 0">No hay productos disponibles.</p>
+
+  <div class="producto" *ngFor="let producto of productos">
+    <div class="producto-info">
+      <h3>{{ producto.nombre }}</h3>
+      <p class="descripcion">{{ producto.descripcion }}</p>
+      <p class="precio">
+        {{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}
+        <span class="descuento" *ngIf="producto.descuento && producto.descuento > 0">
+          → {{ producto.precio | descuento:producto.descuento | currency:'ARS':'symbol':'1.0-0' }}
+          ({{ producto.descuento }}% off)
+        </span>
+      </p>
+    </div>
+    <div class="acciones">
+      <a [routerLink]="['/productos', producto.id]" class="btn-detalle">Ver detalle</a>
+      <button class="btn-eliminar" (click)="eliminar(producto.id)">Eliminar</button>
+    </div>
+  </div>
+</div>

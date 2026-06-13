@@ -1,0 +1,52 @@
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.detalle {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.detalle h2 {
+  margin: 0 0 16px 0;
+  color: #2c3e50;
+}
+
+.detalle p {
+  margin: 8px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.estado {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.activo {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.inactivo {
+  background-color: #fdecea;
+  color: #e74c3c;
+}
+
+.no-encontrado {
+  color: #999;
+  margin-top: 20px;
+}

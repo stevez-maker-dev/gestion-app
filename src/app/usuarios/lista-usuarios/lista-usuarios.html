@@ -1,0 +1,26 @@
+<div>
+  <h2>Usuarios</h2>
+
+  <p class="vacio" *ngIf="usuarios.length === 0">No hay usuarios disponibles.</p>
+
+  <div class="usuario" *ngFor="let usuario of usuarios">
+    <div class="usuario-info">
+      <h3>{{ usuario.nombre }}</h3>
+      <p>{{ usuario.email }}</p>
+      <p>Rol: <strong>{{ usuario.rol }}</strong></p>
+      <span class="estado" [ngClass]="{ 'activo': usuario.activo, 'inactivo': !usuario.activo }">
+        {{ usuario.activo | estadoUsuario }}
+      </span>
+    </div>
+    <div class="acciones">
+      <a [routerLink]="['/usuarios', usuario.id]" class="btn-detalle">Ver detalle</a>
+      <button
+        class="btn-estado"
+        [ngClass]="{ 'btn-desactivar': usuario.activo, 'btn-activar': !usuario.activo }"
+        (click)="cambiarEstado(usuario.id)">
+        {{ usuario.activo ? 'Desactivar' : 'Activar' }}
+      </button>
+      <button class="btn-eliminar" (click)="eliminar(usuario.id)">Eliminar</button>
+    </div>
+  </div>
+</div>

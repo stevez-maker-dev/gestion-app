@@ -1,0 +1,19 @@
+<div>
+  <a [routerLink]="['/usuarios']">← Volver a usuarios</a>
+
+  <div class="detalle" *ngIf="usuario; else noEncontrado">
+    <h2>{{ usuario.nombre }}</h2>
+    <p><strong>Email:</strong> {{ usuario.email }}</p>
+    <p><strong>Rol:</strong> {{ usuario.rol }}</p>
+    <p>
+      <strong>Estado:</strong>
+      <span class="estado" [ngClass]="{ 'activo': usuario.activo, 'inactivo': !usuario.activo }">
+        {{ usuario.activo | estadoUsuario }}
+      </span>
+    </p>
+  </div>
+
+  <ng-template #noEncontrado>
+    <p class="no-encontrado">Usuario no encontrado.</p>
+  </ng-template>
+</div>
