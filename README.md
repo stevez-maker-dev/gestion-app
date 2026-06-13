@@ -1,59 +1,79 @@
-# GestionApp
+# Gestión App — Trabajo Final Integrador Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+## Descripción
+Aplicación de gestión de productos y usuarios desarrollada con Angular.
+Integra routing con lazy loading, rutas dinámicas, módulos de funcionalidad,
+servicios con inyección de dependencias, pipes estándar y personalizados,
+y almacenamiento en localStorage.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías utilizadas
+- Angular 19
+- TypeScript
+- CSS
 
-```bash
+---
+
+## Funcionalidades
+
+### Módulo Inicio
+- Mensaje de bienvenida con accesos directos a cada sección
+
+### Módulo Productos
+- Lista de productos con precio, descripción y descuento
+- Pipe personalizado `descuento` para calcular precio final
+- Pipe estándar `currency` para formatear precios
+- Ver detalle de cada producto en ruta dinámica `/productos/:id`
+- Eliminar productos de la lista
+
+### Módulo Usuarios
+- Lista de usuarios con nombre, email, rol y estado
+- Pipe personalizado `estadoUsuario` para mostrar Activo/Inactivo
+- Ver detalle de cada usuario en ruta dinámica `/usuarios/:id`
+- Eliminar usuarios de la lista
+- Cambiar estado activo/inactivo de cada usuario
+
+### Extras
+- Sidebar permanente para navegación entre secciones
+- localStorage guarda la última sección visitada y redirige al recargar
+- Servicios centralizados para manejo de datos
+
+---
+
+## Instrucciones para ejecutar el proyecto
+
+### 1. Clonar el repositorio
+git clone https://github.com/sebastevez91/gestion-app.git
+
+### 2. Instalar dependencias
+npm install
+
+### 3. Ejecutar el proyecto
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 4. Abrir en el navegador
+http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Despliegue
+- Plataforma: Vercel
+- URL: (agregar link después del despliegue)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Créditos
+- Autor: Sebastian Tevez
+- Curso: Desarrollo en Angular — Centro de e-Learning UTN BA
+- Trabajo Final Integrador
 
-```bash
-ng generate --help
-```
+---
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Bibliografía
+- Freeman, A. Pro Angular 9. 6ª ed. Apress; 2020.
+- Angular. Routing. https://angular.dev/guide/routing/common-router-tasks
+- Angular. NgModules. https://angular.dev/guide/ngmodules/overview
+- Angular. Dependency injection. https://angular.dev/guide/di/dependency-injection
+- Angular. Pipes. https://angular.dev/guide/templates/pipes
+- MDN Web Docs. localStorage. https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
