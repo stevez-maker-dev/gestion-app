@@ -63,6 +63,31 @@ http://localhost:4200
 
 ---
 
+## Capturas de prueba
+
+### Pantalla Inicio
+![Pantalla inicio](public/capturas/Inicio.png)
+
+### Pantalla lista de productos
+![Pantalla lista de productos](public/capturas/Lista-productos.png)
+
+### Pantalla detalle de producto
+![Pantalla detalle de producto](public/capturas/Detalle-producto.png)
+
+### Formulario nuevo producto
+![Formulario nuevo producto](public/capturas/Nuev-producto.png)
+
+### Pantalla lista de usuarios
+![Pantalla lista de usuarios](public/capturas/Lista-usuario.png)
+
+### Pantalla detalle de usuario
+![Pantalla detalle de usuario](public/capturas/Lista-usuario.png)
+
+### Formulario nuevo usuario
+![Formulario nuevo usuario](public/capturas/Nuevo-usuario.png)
+
+---
+
 ## Créditos
 - Autor: Sebastian Tevez
 - Curso: Desarrollo en Angular — Centro de e-Learning UTN BA
